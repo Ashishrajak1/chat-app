@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { DiSenchatouch } from "react-icons/di";
 import { BsFillChatLeftTextFill } from "react-icons/bs";
 import { GrChannel } from "react-icons/gr";
@@ -6,10 +6,12 @@ import { useSelector } from "react-redux";
 import { CiUser } from "react-icons/ci";
 import { HOST } from "@/utils/constants";
 import { useNavigate } from "react-router-dom";
+import NewDm from "./components/NewDm.jsx";
 
 function ContactContainer() {
   const userInfo = useSelector((state) => state.auth.userInfo);
   let Navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="relative text-gray-300 md:w-[35vw] lg:w-[35vw] xl:w-[30vw] bg-[#141718] border-r-2 border-[#2f303b] w-full h-screen flex flex-col">
@@ -31,6 +33,9 @@ function ContactContainer() {
           <div className="font-medium">Chats</div>
         </div>
       </div>
+
+      {/* New Chat Section */}
+      <NewDm />
 
       {/* Channel Section */}
       <div className="h-[10vh] flex items-center px-3 py-2 sm:px-6 md:px-8 mb-4 gap-3 sm:gap-6 cursor-pointer">

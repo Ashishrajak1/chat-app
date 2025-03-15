@@ -4,6 +4,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import mongoose from "mongoose";
 import authRouters from "./routes/AuthRoutes.js";
+import contactRouters from "./routes/ContactRoutes.js";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -25,6 +26,7 @@ app.use(
 app.use(cookieParser());
 
 app.use("/api/auth", authRouters);
+app.use("/api/contact", contactRouters);
 app.use(
   "/uploads/profile",
   express.static(path.join(__dirname, "uploads/profile"))

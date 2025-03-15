@@ -38,7 +38,7 @@ function MessageBar() {
   return (
     <div className="h-[10vh] bg-[#1c1d25] flex items-center px-3 py-2 sm:px-6 md:px-8 mb-6 gap-3 sm:gap-6">
       {/* Input + Icons Container */}
-      <div className="flex-1 flex items-center bg-[#2a2b33] rounded-md px-3 sm:px-4 h-full">
+      <div className="flex-1 flex items-center bg-[#fefefe] rounded-md px-3 sm:px-4 h-full">
         <input
           aria-label="Message"
           placeholder="Enter your Message..."
